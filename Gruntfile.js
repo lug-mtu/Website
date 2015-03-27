@@ -4,6 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    // Dev tasks.
     connect: {
       server: {
         livereload: {
@@ -19,15 +20,33 @@ module.exports = function(grunt) {
       options: {
         livereload: true
       }
+    },
+
+    // Normal tasks.
+    concat: {
+      js: {
+        src: [ "js/vendor/jquery.js", "js/vendor/fastclick.js", "js/vendor/modernizr.js",  "js/foundation.min.js" ],
+        dest: "js/global.js",
+      },
+      css: {
+        src: [ "css/foundation.css" ],
+        dest: "css/global.css",
+      }
     }
 
   });
 
-  // Load plugins.
+  // Load plugins (dev purposes).
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Register tasks.
+  // Load plugins.
+  grunt.loadNpmTasks('grunt-contrib-concat');
+
+  // Register tasks (default).
+  grunt.registerTask('default', ['concat']);
+
+  // Register tasks (dev purposes).
   grunt.registerTask('dev', ['connect', 'watch']);
 
 };
