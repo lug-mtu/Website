@@ -27,10 +27,28 @@ module.exports = function(grunt) {
       js: {
         src: [ "js/vendor/jquery.js", "js/vendor/fastclick.js", "js/vendor/modernizr.js",  "js/foundation.min.js" ],
         dest: "js/global.js",
+      }
+    },
+
+    sass: {
+      dist: {
+        options: {
+          style: "compressed"
+        },
+        files: {
+          "css/global.css": "css/main.scss"
+        }
+      }
+    },
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions']
       },
-      css: {
-        src: [ "css/foundation.css" ],
-        dest: "css/global.css",
+      dist: {
+        files: {
+          "css/global.css": "css/global.css"
+        }
       }
     }
 
@@ -42,9 +60,11 @@ module.exports = function(grunt) {
 
   // Load plugins.
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Register tasks (default).
-  grunt.registerTask('default', ['concat']);
+  grunt.registerTask('default', [ 'concat', 'sass', 'autoprefixer' ]);
 
   // Register tasks (dev purposes).
   grunt.registerTask('dev', ['connect', 'watch']);
