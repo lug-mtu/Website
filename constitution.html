@@ -4,13 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MTU LUG</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/foundation/foundation.js"></script>
-    <script src="js/foundation/foundation.topbar.js"></script>
-    <script src="js/vendor/jquery.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+		<link rel="stylesheet" href="css/global.min.css">
+    <script src="js/global.min.js"></script>
   </head>
   <body>
 		<nav class="top-bar" data-topbar role="navigation">
@@ -24,7 +19,7 @@
 		  <section class="top-bar-section">
 		    <ul class="left">
 		      <li class="active">
-		        <a href="constitution.html">Consitution</a>
+		        <a href="constitution.html">Constitution</a>
 		      </li>
 		      <li>
 		        <a href="https://drive.google.com/a/mtu.edu/folderview?id=0Bx_Tmd32ygk3fmFybTVGLXhDLXBkQVM0SHFQR3NXLUp0MGNhMHk0akY5UXVNTG9waGM1eFU">Minutes</a>
@@ -38,6 +33,14 @@
 		          <li><a href="mailto:lug@mtu.edu">Email us directly</a></li>
 		        </ul>
 		      </li>
+		      <li class="has-dropdown">
+          <a href="#">Resources</a>
+            <ul class="dropdown">
+              <li><a href="http://status.lug.mtu.edu">Server Status</a></li>
+              <li><a href="https://lists.mtu.edu/sympa/subscribe/lug-l">Request new software mirror</a></li>
+              <li><a href="mailto:lug-server-admins-l@mtu.edu">Report service issue</a></li>
+            </ul>
+          </li>
 		    </ul>
 		    <ul class="right">
 		      <li class="has-dropdown">
@@ -79,7 +82,7 @@
 		    </ul>
 		  </section>
 		</nav>
-<div class="well">
+		<div class="row">
 				<h3>CONSTITUTION OF THE LINUX/UNIX USERS GROUP<br>October 2003</h3>
 
 				<h4>Article I: Name</h4>
@@ -245,7 +248,9 @@
 					<li>Membership in the Michigan Tech Linux Users Group will no longer require a fee.</li>
 				</ul>
 				<em>Items in italics are included verbatim to comply with MTU Student Organization Policy in conjunction with the <a href="http://www.admin.mtu.edu/dos/">MTU Office of Student Affairs</a>.</em>
-			</div>
 		</div>
-		  </body>
-		</html>
+  <script>
+  $(document).foundation();
+	</script>
+  </body>
+</html>

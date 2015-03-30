@@ -1,0 +1,25 @@
+/**
+* Initially authored by @Pinjasaur
+*/
+
+// all the crap from the Foundation framework
+@import "foundation";
+
+// should probably get some colors decided upon
+$linkage-color: #1B6CB0;
+$primary-color: #000;
+$secondary-color: #fff;
+
+body {
+  background: darken(#fff, 2%);
+}
+
+a {
+  // welp, _underline_ effects *all* anchor tags, so it looks dumb in the header >.<
+  //text-decoration: underline;
+  color: $linkage-color;
+
+  &:hover, &:focus {
+    color: lighten($linkage-color, 10%);
+  }
+}
