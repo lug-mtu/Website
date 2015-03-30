@@ -6736,4 +6736,9 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 body {
-  background: white; }
+  background: #fafafa; }
+
+a {
+  color: #1B6CB0; }
+a:hover, a:focus {
+  color: #2287dc; }

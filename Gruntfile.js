@@ -16,6 +16,8 @@ module.exports = function(grunt) {
       }
     },
 
+    // still figuring out the whole LiveReload thing, it pretty much works now
+    // Just trying to work on using it w/ preprocessors
     watch: {
       options: {
         livereload: true,
